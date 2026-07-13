@@ -20,7 +20,7 @@
       <div id="clock"></div>
     </section>
 
-    <section class="calender">
+    <section class="calendar">
       <div class="nav-btn-container">
         <button class="nav-btn">◀️</button>
         <h2 id="monthYear"></h2>
