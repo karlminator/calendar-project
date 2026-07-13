@@ -1,0 +1,32 @@
+:root {
+  --primary: #ff8360;
+  --primary-light: #ffbcaa;
+  --primary-dark: #ff5829;
+  --background: #f5f5f5;
+
+  --success: #d1fae5;
+  --success-msg: #065f46;
+
+  --error: #fee2e2;
+  --error-msg: #b91c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  background-color: var(--background);
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
