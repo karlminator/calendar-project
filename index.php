@@ -6,7 +6,7 @@
     <title>Calendar Project 🗓️✍️</title>
 
     <meta name="description" content="Calendar, MySQL-PHP-JS" />
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="style.css" />
     <script src="calendar.js" defer></script>
   </head>
