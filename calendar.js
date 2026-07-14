@@ -21,14 +21,14 @@ const renderCalendar = (date = new Date()) => {
   const today = new Date();
 
   const totalDays = new Date(year, month + 1, 0).getDate();
-  const firstDayOfMonth = new Date(year, month, 1).getDay();
+  const firstDayOfMonth = (new Date(year, month, 1).getDay() + 6) % 7;
 
   monthYearEl.textContent = date.toLocaleDateString("en-US", {
     month: "long",
     year: "numeric",
   });
 
-  const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   weekDays.forEach((day) => {
     const dayEl = make("div", "day-name", day);
     calEl.appendChild(dayEl);
@@ -173,7 +173,7 @@ const changeMonth = (offset) => {
 // ⏰ Update the Clock
 const updateClock = () => {
   const now = new Date();
-  const clock = document.getElementById("clock");
+  const clock = $("clock");
   clock.textContent = [
     now.getHours().toString().padStart(2, "0"),
     now.getMinutes().toString().padStart(2, "0"),
