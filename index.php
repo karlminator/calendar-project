@@ -26,9 +26,9 @@ include "calendar.php"
 
     <section class="calendar">
       <div class="nav-btn-container">
-        <button class="nav-btn">◀️</button>
+        <button class="nav-btn" id="prevMonthBtn">◀️</button>
         <h2 id="monthYear"></h2>
-        <button class="nav-btn">▶️</button>
+        <button class="nav-btn" id="nextMonthBtn">▶️</button>
       </div>
 
       <div class="calendar-grid" id="calendar"></div>
@@ -80,7 +80,7 @@ include "calendar.php"
         </form>
 
         <!-- Modal: Close Button -->
-        <button type="button" class="submit-btn">Cancel ❌</button>
+        <button type="button" id="cancel" class="submit-btn">Cancel ❌</button>
       </div>
     </section>
   </body>

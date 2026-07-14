@@ -163,12 +163,19 @@ const handleEventSelection = (eventJSON) => {
 const closeModal = () => {
   modalEl.style.display = "none";
 };
+const cancelBtn = $("cancel");
+if (cancelBtn) cancelBtn.addEventListener("click", closeModal);
 
 // 🔄 Navigate Between Months
 const changeMonth = (offset) => {
   currentDate.setMonth(currentDate.getMonth() + offset);
   renderCalendar(currentDate);
 };
+
+const prevMonthBtn = $("prevMonthBtn");
+if (prevMonthBtn) prevMonthBtn.addEventListener("click", () => changeMonth(-1));
+const nextMonthBtn = $("nextMonthBtn");
+if (nextMonthBtn) nextMonthBtn.addEventListener("click", () => changeMonth(1));
 
 // ⏰ Update the Clock
 const updateClock = () => {
